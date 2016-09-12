@@ -84,12 +84,15 @@
 
 
 
+<meta name="description" content="keep moving！">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
+<meta property="og:title" content="白斩祭">
 <meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:site_name" content="白斩祭">
+<meta property="og:description" content="keep moving！">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="白斩祭">
+<meta name="twitter:description" content="keep moving！">
 
 
 
@@ -102,7 +105,7 @@
     motion: true,
     duoshuo: {
       userId: 0,
-      author: 'Author'
+      author: '博主'
     }
   };
 </script>
@@ -112,10 +115,10 @@
 
   <link rel="canonical" href="http://yoursite.com/"/>
 
-  <title> Hexo </title>
+  <title> 白斩祭 </title>
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
   
 
@@ -145,11 +148,11 @@
   <div class="custom-logo-site-title">
     <a href="/"  class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
-      <span class="site-title">Hexo</span>
+      <span class="site-title">白斩祭</span>
       <span class="logo-line-after"><i></i></span>
     </a>
   </div>
-  <p class="site-subtitle"></p>
+  <p class="site-subtitle">keep moving！</p>
 </div>
 
 <div class="site-nav-toggle">
@@ -172,7 +175,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Startseite
+            首页
           </a>
         </li>
       
@@ -182,17 +185,17 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archiv
+            归档
           </a>
         </li>
       
         
         <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
+          <a href="/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
-            Tags
+            标签
           </a>
         </li>
       
@@ -235,6 +238,133 @@
             
               
                 
+                <a class="post-title-link" href="/2016/09/12/如何拥有一个属于自己hexo博客/" itemprop="url">
+                  未命名
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-09-12T14:44:09+08:00" content="2016-09-12">
+              2016-09-12
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+		  
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="如何拥有一个属于自己hexo博客"><a href="#如何拥有一个属于自己hexo博客" class="headerlink" title="如何拥有一个属于自己hexo博客"></a>如何拥有一个属于自己hexo博客</h1><hr>
+<p>千里之行始于足下 动手去做才是开始</p>
+<p>##<strong>1.准备工作</strong></p>
+<blockquote>
+<ul>
+<li>安装Node.js</li>
+<li>安装Git</li>
+<li>注册Github</li>
+</ul>
+</blockquote>
+<p>##<strong>2.SSH keys</strong></p>
+<p>SSH keys可以git项目与远程的github建立联系<br>右键打开Git Bash Here,查看现有ssh keys，输入：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ cd ~/. ssh</div></pre></td></tr></table></figure></p>
+<p>生成新的SSH Keys<br>（此处的邮箱地址请输入你注册的git邮箱）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ ssh-keygen -t rsa -C &quot;邮件地址@xxxxx.com</div></pre></td></tr></table></figure></p>
+<p>然后回车</p>
+<p>然后系统会要你输入密码。这个密码会在你提交项目时使用，如果为空的话提交项目时则不用输入。<br>（输入密码的时候没有*字样的，你直接输入就可以了）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Enter passphrase (empty for no passphrase):&lt;输入加密串&gt;</div><div class="line">Enter same passphrase again:&lt;再次输入加密串&gt;</div></pre></td></tr></table></figure></p>
+<p>获取秘钥<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ cat ~/.ssh/id_rsa.pub</div></pre></td></tr></table></figure></p>
+<p>然后拷贝key</p>
+<p>在Github上添加SSH密钥<br>![此处输入图片的描述][1]</p>
+<p>然后title随便取个名字，key 就是上面我们拷贝的内容<br>输入以下命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ ssh git@github.com</div></pre></td></tr></table></figure></p>
+<p>会看到<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Hi matachunyan! You&apos;ve successfully authenticated, but GitHub does not provide shell access.Connection to github.com closed.</div></pre></td></tr></table></figure></p>
+<p>设置用户信息<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ git config --global user.name &quot;你git的名字&quot;</div><div class="line">$ git config --global user.email  &quot;注册邮箱地址@xxxx.com&quot;</div></pre></td></tr></table></figure></p>
+<p>##<strong>3.HEXO的搭建</strong><br>Github上建立库<br>登陆Github，建立一个名为seminelee.github.io的仓库。<br>注意！Github Pages的Repository名字是特定的，比如我Github账号是matachunyan，那么我Github Pages Repository名字就是matachunyan.github.io</p>
+<p>安装HEXO<br>打开Git Bash Here<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install -g hexo</div></pre></td></tr></table></figure></p>
+<p>接下来，我们选择一个硬盘目录作为存放文件的路径，例如我手动在e 盘目录下建了一个BLOG的文件夹</p>
+<p>然后进入该目录：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ cd e:\BLOG</div></pre></td></tr></table></figure></p>
+<p>在BLOG目录下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo init e:\BLOG</div></pre></td></tr></table></figure></p>
+<p>Hexo随后会自动在目标文件夹建立网站所需要的所有文件。</p>
+<p>在BLOG目录下，然后生成部署文件，启动本地服务：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ hexo s # 或者hexo server，可以在http://localhost:4000/ 查看</div><div class="line">$ hexo g # 或者hexo generate</div></pre></td></tr></table></figure></p>
+<p>在浏览器中输入localhost:4000看看，可以看到默认主题下的博客，这就实现了本地预览了。<br>Hexo 几个常用的命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">hexo generate (hexo g) 生成静态文件，会在当前目录下生成一个新的叫做public的文件夹</div><div class="line">hexo server (hexo s) 启动本地web服务，用于博客的预览</div><div class="line">hexo deploy (hexo d) 部署博客到远端服务器</div><div class="line">hexo new &quot;postName&quot; #新建文章</div><div class="line">hexo new page &quot;pageName&quot; #新建页面</div></pre></td></tr></table></figure></p>
+<p>上传至Git库中<br>打开BLOG目录下的_config.yml,更改增加配置：<br>注意冒号后要添加一个空格<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"># Deployment</div><div class="line">## Docs: http://hexo.io/docs/deployment.html</div><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repository: https://github.com/matachunyan/matachunyan.github.io.git</div><div class="line">  branch: master</div></pre></td></tr></table></figure></p>
+<p>然后输入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ hexo g #generate生成</div><div class="line">$ hexo d #deploy开发环境</div></pre></td></tr></table></figure></p>
+<p>如执行 hexo deploy 后,出现 error deployer not found:github 的错误 输入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-deployer-git --save</div></pre></td></tr></table></figure></p>
+<p>再次执行hexo deploy，打开<a href="https://matachunyan.github.io/就能看到你自己的博客了！" target="_blank" rel="external">https://matachunyan.github.io/就能看到你自己的博客了！</a></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/09/12/hello-world/" itemprop="url">
                   Hello World
                 </a>
@@ -248,7 +378,7 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Veröffentlicht am</span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2016-09-12T12:50:40+08:00" content="2016-09-12">
               2016-09-12
             </time>
@@ -259,6 +389,7 @@
           
             
           
+		  
 
           
 
@@ -323,9 +454,46 @@
 
           </div>
           
-
-
-          
+  <% if (!index && post.comments && config.duoshuo_shortname){ %>
+  <section id="comments">
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="<%= post.layout %>-<%= post.slug %>" data-title="<%= post.title %>" data-url="<%= page.permalink %>"></div>
+    <!-- 多说评论框 end -->
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:'<%= config.duoshuo_shortname %>'};
+      (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+      })();
+      </script>
+    <!-- 多说公共JS代码 end -->
+  </section>
+  <% } %>
+          <% if (!index && post.comments && config.duoshuo_shortname){ %>
+  <section id="comments">
+   <!-- 多说评论框 start -->
+<div id="ds-thread" class="ds-thread" data-thread-key="<%= post.path %>" data-title="<%= post.title %>" data-url="<%= post.permalink %>"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"datoublog"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- 多说公共JS代码 end -->
+  </section>
+  <% } %>
 
         </div>
         
@@ -349,16 +517,16 @@
       <section class="site-overview sidebar-panel  sidebar-panel-active ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
-               src="/images/avatar.gif"
-               alt="John Doe" />
-          <p class="site-author-name" itemprop="name">John Doe</p>
-          <p class="site-description motion-element" itemprop="description"></p>
+               src="http://img.zcool.cn/sucaiori/2CD7216F-652C-3F18-0AE0-444871D61D30.jpg@700w_0e_1l.jpg"
+               alt="白斩祭" />
+          <p class="site-author-name" itemprop="name">白斩祭</p>
+          <p class="site-description motion-element" itemprop="description">keep moving！</p>
         </div>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">1</span>
-              <span class="site-state-item-name">Artikel</span>
+              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-name">日志</span>
             </a>
           </div>
 
@@ -401,19 +569,24 @@
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">John Doe</span>
+  <span class="author" itemprop="copyrightHolder">白斩祭</span>
 </div>
 
 <div class="powered-by">
-  Erstellt mit  <a class="theme-link" href="https://hexo.io">Hexo</a>
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
 </div>
 
 <div class="theme-info">
-  Theme -
+  主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
     NexT.Muse
   </a>
 </div>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+本站总访问量 <span id="busuanzi_value_site_pv"></span> &nbsp&nbsp&nbsp
+您是第<span id="busuanzi_value_site_uv"></span>个来到的小伙伴
 
         
 
