@@ -90,7 +90,7 @@
 <meta property="og:url" content="http://yoursite.com/tags/index.html">
 <meta property="og:site_name" content="白斩祭">
 <meta property="og:description" content="keep moving！">
-<meta property="og:updated_time" content="2016-09-12T06:22:24.488Z">
+<meta property="og:updated_time" content="2016-09-14T08:02:05.415Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="TagCloud">
 <meta name="twitter:description" content="keep moving！">
@@ -185,6 +185,26 @@
         </li>
       
         
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             
@@ -196,7 +216,7 @@
       
         
         <li class="menu-item menu-item-tags">
-          <a href="/" rel="section">
+          <a href="/tags" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
@@ -234,20 +254,12 @@
       </div>
     
 	
-  <div class="comments" id="comments">
-    
-      <div class="ds-thread" data-thread-key="tags/index.html"
-           data-title="TagCloud" data-url="http://yoursite.com/tags/index.html">
-      </div>
-    
-  </div>
-
   </div>
 
 
           </div>
           
-  <% if (!index && post.comments && config.duoshuo_shortname){ %>
+  
   <section id="comments">
     <!-- 多说评论框 start -->
     <div class="ds-thread" data-thread-key="<%= post.layout %>-<%= post.slug %>" data-title="<%= post.title %>" data-url="<%= page.permalink %>"></div>
@@ -266,8 +278,8 @@
       </script>
     <!-- 多说公共JS代码 end -->
   </section>
-  <% } %>
-          <% if (!index && post.comments && config.duoshuo_shortname){ %>
+  
+          
   <section id="comments">
    <!-- 多说评论框 start -->
 <div id="ds-thread" class="ds-thread" data-thread-key="<%= post.path %>" data-title="<%= post.title %>" data-url="<%= post.permalink %>"></div>
@@ -332,6 +344,17 @@ var duoshuoQuery = {short_name:"datoublog"};
         
 
         <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/matachunyan" target="_blank" title="github">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  github
+                </a>
+              </span>
+            
           
         </div>
 
